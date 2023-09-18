@@ -30,13 +30,12 @@ int main(int argc, char const *argv[])
 
     free(puntero); // liberar memoria para que el sistema operativo la pueda utilizar
 
-    
     std::cout << "Direcciones de memoria" << std::endl;
     std::cout << "Size of:" << sizeof(puntero) << std::endl;
     std::cout << "puntero1" << puntero << std::endl;
     std::cout << "puntero2" << &puntero << std::endl;
 
-    //free(puntero); // liberar memoria para que el sistema operativo la pueda utilizar
+    // free(puntero); // liberar memoria para que el sistema operativo la pueda utilizar
 
     // memoria dinamica en C
     std::cout << "\nMascota en C" << std::endl;
@@ -48,17 +47,15 @@ int main(int argc, char const *argv[])
     free(mascotaC);
 
     //////////////////////////////////////////////////////////////
-    
-        // memoria dinamica C++
+
+    // memoria dinamica C++
     std::cout << "\nMascota en C++" << std::endl;
     Mascota *mascotaCPP = new Mascota();
     mascotaCPP->DecirNombre();
     delete mascotaCPP;
-    
 
-    //int a;
-    //std::cout << "tamaño void: " << sizeof(Mascota) << std::endl;
-
+    // int a;
+    // std::cout << "tamaño void: " << sizeof(Mascota) << std::endl;
 
     return 0;
 }

@@ -1,0 +1,29 @@
+class Agua
+class Arbusto
+class Boton
+class Camino
+class Camion
+class Carretera
+class Carro
+class Cocodrilo
+class Control
+class Jugador
+class Obstaculo
+class Plataforma
+class Rana
+class Tortuga
+
+Rana--|>Jugador
+Rana --o Camino
+Rana --o Control
+Control --* Boton
+Camino --*Obstaculo
+Camino--*Plataforma
+Obstaculo <|-- Carro
+Obstaculo <|-- Agua
+Obstaculo <|-- Camiones
+Obstaculo <|-- Cocodrilo
+Plataforma <|-- Carretera
+Plataforma <|-- Tortuga
+Plataforma <|-- Tronco
+Plataforma <|-- Arbusto

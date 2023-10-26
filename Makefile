@@ -1,7 +1,9 @@
+CXX = x86_64-w64-mingw32-g++ #windows
+CXX = c++ #linux
 br: clean compilar ejecutar 
 
 compilar : src/main.cpp
-	g++ src/main.cpp -o bin/mascotas -I include
+	$(CXX) src/main.cpp -o bin/mascotas -I include
 
 ejecutar : bin/mascotas
 	./bin/mascotas

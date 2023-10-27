@@ -17,3 +17,17 @@ Actualizable o-- Hogar
 Dibujo <|-- Camion
 Actualizable o-- Camion
 Sprite--|>Dibujo
+Rana--|>Jugador
+Rana --o Camino
+Rana --o Control
+Control --* Boton
+Camino --*Obstaculo
+Camino--*Plataforma
+Obstaculo <|-- Carro
+Obstaculo <|-- Agua
+Obstaculo <|-- Camiones
+Obstaculo <|-- Cocodrilo
+Plataforma <|-- Carretera
+Plataforma <|-- Tortuga
+Plataforma <|-- Tronco
+Plataforma <|-- Arbusto

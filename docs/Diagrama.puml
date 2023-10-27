@@ -1,29 +1,19 @@
-class Agua
-class Arbusto
-class Boton
-class Camino
-class Camion
-class Carretera
-class Carro
-class Cocodrilo
-class Control
-class Jugador
-class Obstaculo
-class Plataforma
-class Rana
-class Tortuga
 
-Rana--|>Jugador
-Rana --o Camino
-Rana --o Control
-Control --* Boton
-Camino --*Obstaculo
-Camino--*Plataforma
-Obstaculo <|-- Carro
-Obstaculo <|-- Agua
-Obstaculo <|-- Camiones
-Obstaculo <|-- Cocodrilo
-Plataforma <|-- Carretera
-Plataforma <|-- Tortuga
-Plataforma <|-- Tronco
-Plataforma <|-- Arbusto
+class Hogar
+class Camion
+class Carro
+class Rana
+class Actualizable
+class Dibujo
+class Sprite
+class Ventana 
+
+Rana--|>Dibujo
+Rana--o Actualizable
+Dibujo <|-- Carro
+Actualizable o-- Carro
+Dibujo <|-- Hogar
+Actualizable o-- Hogar
+Dibujo <|-- Camion
+Actualizable o-- Camion
+Sprite--|>Dibujo

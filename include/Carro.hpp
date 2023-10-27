@@ -1,8 +1,24 @@
-class Carro
+#pragma once
+#include <Dibujo.hpp>
+#include <Actualizable.hpp>
+
+class Carro : public Dibujo, public Actualizable
 {
 private:
-    /* data */
+    int direccion;
+
 public:
-    Carro(/* args */) {}
+    Carro(int x, int y) : Dibujo(x, y, "carro")
+    {
+        this->direccion = 1;
+    }
     ~Carro() {}
+    void CambiarDireccion()
+    {
+        this->direccion *= -1;
+    }
+    void Actualizar()
+    {
+        this->x += this->direccion;
+    }
 };

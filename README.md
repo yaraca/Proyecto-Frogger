@@ -2,6 +2,8 @@
 
 [![frog.jpg](https://i.postimg.cc/qBFsYqF7/frog.jpg)](https://postimg.cc/c6Qttx0q)
 
+### Stephanie Vianney Águila Rivera 22310212
+### Yara Patricia Campos AGuado 22310266
 
 ## DESCRIPCIÓN
 <div style="text-align: justify"> Frogger es un juego clásico de arcade desarrollado por Konami y lanzado en 1981. En Frogger, los jugadores asumen el papel de una rana que debe atravesar una carretera llena de tráfico y luego cruzar un río lleno de obstáculos para llegar a su hogar en el otro lado de la pantalla. El objetivo es evitar ser atropellado por vehículos en movimiento, caer al agua o ser capturado por depredadores mientras se mueve de un lado a otro. </div>

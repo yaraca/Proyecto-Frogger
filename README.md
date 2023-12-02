@@ -76,4 +76,14 @@ El objetivo de Frogger es guiar a una rana desde la parte inferior de la pantall
 
 [![obstaculos.png](https://i.postimg.cc/W3tbrNTD/obstaculos.png)](https://postimg.cc/CBTgpVZY)
 
+## INSTRUCCIONES
+**1.**
+El movimiento de la Rana se va a realizar con las flechas del teclado.
+**2.**
+Se debe de llevar a la Rana hasta las hojas para estar a salvo.
+**3.**
+Se debe de tener cuidado con los obstáculos y debes evitarlos, de lo contrario habrá terminado el juego.
+
+
+
 <div style="text-align: justify">  </div>

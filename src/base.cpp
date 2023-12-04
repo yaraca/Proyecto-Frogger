@@ -1,3 +1,4 @@
+
 #include <base.h>
 // constructor principal
 Base::Base(sf::Texture& spriteSheet, sf::FloatRect rect)

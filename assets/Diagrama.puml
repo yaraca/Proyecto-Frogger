@@ -1,33 +1,98 @@
+@startuml 
 
-class Hogar
-class Camion
-class Carro
-class Rana
-class Actualizable
-class Dibujo
-class Sprite
-class Ventana 
 
-Rana--|>Dibujo
-Rana--o Actualizable
-Dibujo <|-- Carro
-Actualizable o-- Carro
-Dibujo <|-- Hogar
-Actualizable o-- Hogar
-Dibujo <|-- Camion
-Actualizable o-- Camion
-Sprite--|>Dibujo
-Rana--|>Jugador
-Rana --o Camino
-Rana --o Control
-Control --* Boton
-Camino --*Obstaculo
-Camino--*Plataforma
-Obstaculo <|-- Carro
-Obstaculo <|-- Agua
-Obstaculo <|-- Camiones
-Obstaculo <|-- Cocodrilo
-Plataforma <|-- Carretera
-Plataforma <|-- Tortuga
-Plataforma <|-- Tronco
-Plataforma <|-- Arbusto
+class DrawableSprite {
+    - position : sf::Vector2f
+    - size : sf::Vector2f
+    - skin : sf::Texture
+    - sprite : sf::Sprite
+    + DrawableSprite()
+    + draw(sf::RenderTarget &target, sf::RenderStates states) : void
+    + Update() : void
+    + CheckLife() : bool
+    + CheckCollide() : bool
+    + move(sf::Keyboard::Key, sf::Vector2f) : void
+}
+
+class Log {
+    - velocity : sf::Vector2f
+    - iSpeed : int
+    - iDirection : int
+    + Log(sf::Texture&, int, int, sf::IntRect, int, int)
+    + Update() : void
+    + CheckLife() : bool
+    + CheckCollision() : bool
+    + move() : void
+    + GetSpeed() : int
+    + GetDirection() : int
+    + GetGlobalBounds() : sf::FloatRect
+}
+
+class Vehicle {
+    - velocity : sf::Vector2f
+    - iSpeed : int
+    - iDirection : int
+    + Vehicle(sf::Texture&, int, int, sf::IntRect, int, int)
+    + Vehicle()
+    + Update() : void
+    + CheckLife() : bool
+    + CheckCollide() : bool
+    + move() : void
+    + GetGlobalBounds() : sf::FloatRect
+}
+
+class Frog {
+    - iLives : int
+    - bOnLog : bool
+    - bCanMove : bool
+    - iFrameCount : int
+    - bIsAnim : bool
+    - iRotation : int
+    - iDistanceX : int
+    - iDistanceY : int
+    - iFinalFrame : int
+    + Frog(sf::Texture&)
+    + Update(sf::Vector2f, Text&) : void
+    + LogMove(int, int) : void
+    + SetOnLog(bool) : void
+    + SetCanMove(bool) : void
+    + GetCanMove() : bool
+    + CheckLife() : bool
+    + CheckCollide() : bool
+    + move(sf::Keyboard::Key) : void
+}
+
+class BGround {
+    + BGround()
+}
+
+class Base {
+    - base : sf::FloatRect
+    - bActive : bool
+    - bVisible : bool
+    + Base(sf::Texture&, sf::FloatRect)
+    + Base()
+    + GetBase() : sf::FloatRect
+    + GetVisible() : bool
+    + SetVisible(bool) : void
+}
+
+class Text {
+    - text : sf::Text
+    - bVisible : bool
+    + Text(sf::Font&, int, sf::String, sf::Vector2f, bool)
+    + GetText() : sf::Text
+    + SetText(sf::String) : void
+    + SetVisible(bool) : void
+    + GetVisible() : bool
+}
+
+
+DrawableSprite <|-- Base
+DrawableSprite <|-- BGround
+DrawableSprite <|-- Log
+sf::Drawable <|-- DrawableSprite
+DrawableSprite <|-- Vehicle
+DrawableSprite <|-- Frog
+
+@enduml

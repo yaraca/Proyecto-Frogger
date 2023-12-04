@@ -1,20 +1,20 @@
 #include <frog.h>
 
 // Constructor principal para la rana
-Forg::Frogg(sf::Texture &spriteSheet)
+Frog::Frog(sf::Texture &spriteSheet)
 {
     // Configurar el sprite
     size = sf::Vector2f(23, 17);
     skin = spriteSheet;
 
-    sprite.setSacale(1, 1);
+    sprite.setScale(1, 1);
     sprite.setOrigin(23 / 2, 17 / 2);
-    sprite.setposition(250, 600 - (46 / 2));
+    sprite.setPosition(250, 600 - (46 / 2));
     sprite.setTexture(skin);
-    sprite.setTextureRect(sf::IntRect(12, 368, 23, 27));
+    sprite.setTextureRect(sf::IntRect(12, 368, 23, 17));
     // Establecer vidas en 3
     iLives = 3;
-    // establecer boleanos en falso
+    // Establecer booleanos en falso
     bCanMove = false;
     bOnLog = false;
     // Establecer propiedades de animación en falso
@@ -25,7 +25,7 @@ Forg::Frogg(sf::Texture &spriteSheet)
     int iDistanceY = 0;
 }
 
-// La funcion de actualización que se llama cada vez que se actualiza el juego principal
+// La función de actualización que se llama cada vez que se actualiza el juego principal
 void Frog::Update(sf::Vector2f windowSize, Text &text)
 {
 
@@ -67,7 +67,7 @@ void Frog::Update(sf::Vector2f windowSize, Text &text)
     bOnLog = false;
 }
 
-// Este método mueve a la rana si esta en un tronco
+// Este método mueve a la rana si está en un tronco
 // Toma la velocidad del tronco y la dirección en la que la rana está intersectando
 void Frog::LogMove(int iSpeed, int direction)
 {
@@ -79,12 +79,12 @@ void Frog::LogMove(int iSpeed, int direction)
 
     if (direction == 2)
     {
-        // Mover añ jugador a la velocidad del tronco
+        // Mover al jugador a la velocidad del tronco
         sprite.setPosition(sprite.getPosition().x - iSpeed, sprite.getPosition().y);
     }
 }
 
-// El método para mover al jugador. Se toma en cuenta la entrada del teclado decide que hacer
+// El método para mover al jugador. Toma la entrada del teclado y decide qué hacer
 void Frog::move(sf::Keyboard::Key key)
 {
     // Verificar si la rana puede moverse
@@ -183,7 +183,7 @@ void Frog::Animate()
         {
             bCanMove = true;
         }
-        // Si la aniamción ha terminado, detenerla y restablecer la textura a su valor predeterminado
+        // Si la animación ha terminado, detenerla y restablecer la textura a su valor predeterminado
         if (iFrameCount >= iFinalFrame)
         {
             sprite.setTextureRect(sf::IntRect(12, 368, 23, 17));

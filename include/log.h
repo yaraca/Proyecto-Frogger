@@ -10,7 +10,7 @@ private:
     int iDirection;
 
 public:
-    log(sf::Texture &, int x, int y, sf::IntRect, int, int);
+    Log(sf::Texture &, int x, int y, sf::IntRect, int, int);
     void Update();
     bool ChechLife();
     bool CheckCollision();

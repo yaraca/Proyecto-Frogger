@@ -8,10 +8,9 @@ private:
     bool bVisible;
 
 public:
-    Text(sf::Font& font, int size, sf::String, sf::Vector2f pos, bool visible);
+    Text(sf::Font &font, int size, sf::String, sf::Vector2f pos, bool visible);
     sf::Text GetText();
     void SetText GetText(Sf::String);
     void SetVisible(bool b);
     bool GetVisible();
 };
-

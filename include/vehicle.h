@@ -1,4 +1,4 @@
-#pragma once 
+#pragma once
 #include <SFML/graphics.hpp>
 #include <DrawableSprite.h>
 
@@ -10,7 +10,7 @@ private:
     int iDirection;
 
 public:
-    Vehicle(sf::Texture&, int x, int y, sf::IntRect, int, int);
+    Vehicle(sf::Texture &, int x, int y, sf::IntRect, int, int);
     Vehicle();
     void Update();
     bool CheckLife();
@@ -18,5 +18,3 @@ public:
     void move();
     sf::FloatRect GetGlobalBounds();
 };
-
-

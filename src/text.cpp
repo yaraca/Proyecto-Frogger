@@ -1,7 +1,7 @@
 #include <Text.h>
 
-//COnstructor principal
-Text::Text(sf::Font&, int size, sf::String string, sf::Vector2f pos, bool visible)
+// COnstructor principal
+Text::Text(sf::Font &, int size, sf::String string, sf::Vector2f pos, bool visible)
 {
     text.setFont(font);
     text.setCharacterSize(size);
@@ -10,7 +10,7 @@ Text::Text(sf::Font&, int size, sf::String string, sf::Vector2f pos, bool visibl
     bVisible = visible;
 }
 
-//Getters y setters
+// Getters y setters
 void Text::SetText(sf::String string)
 {
     text.setString(string);

@@ -16,12 +16,12 @@
 
 using namespace std;
 
-sf::Texture spriteSheet;
-vector<Vehicle> lanes[5];
-	vector<Log> logs[5];
-	Base bases[5];
-	BGround bGround;
-bool bGameOver;
-void Draw(sf::RenderWindow&, Frog&, Text,Text);
-void DrawGameOver(sf::RenderWindow&, Text, Text);
-void ResetGame(Frog&);
+sf::Texture spriteSheet;//Textura 
+vector<Vehicle> lanes[5];//Arreglo de vectores de Vehicle
+	vector<Log> logs[5];//Arreglo de vectores de Log
+	Base bases[5];//Arreglo de objetos de Base
+	BGround bGround;//Objeto de la BGround
+bool bGameOver;//Indica si se termino el juego
+void Draw(sf::RenderWindow&, Frog&, Text,Text);//Diseño de la ventana de inicio
+void DrawGameOver(sf::RenderWindow&, Text, Text);//Diseño de la ventana al final del juego
+void ResetGame(Frog&);//Reiniciar el juego

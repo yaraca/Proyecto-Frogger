@@ -4,14 +4,13 @@
 
 class Base : public DrawableSprite
 {
-    private:
-
+private:
     sf::FloatRect base;
     bool bActive;
     bool bVisible;
-    public:
 
-    Base(sf::Texture&, sf::FloatRect);
+public:
+    Base(sf::Texture &, sf::FloatRect);
     Base();
     sf::FloatRect GetBase();
     bool GetVisible();

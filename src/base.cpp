@@ -1,16 +1,16 @@
 #include <base.h>
-// constructor pricnipal 
-Base::Base(sf::Texture& spriteSheet, sf::FloatRect rect)
+// constructor pricnipal
+Base::Base(sf::Texture &spriteSheet, sf::FloatRect rect)
 {
-    // configurar sprite 
-    sprite.setScale(1,1);
-    sprite.setOrigin(23/2,17/2);
-    sprite.setPosition(rect.left+rect.width/2,rect.top+rect.height/2);
+    // configurar sprite
+    sprite.setScale(1, 1);
+    sprite.setOrigin(23 / 2, 17 / 2);
+    sprite.setPosition(rect.left + rect.width / 2, rect.top + rect.height / 2);
     sprite.setTexture(spriteSheet);
-    sprite.setTextureRect(sf::IntRect(12,368,23,17));
+    sprite.setTextureRect(sf::IntRect(12, 368, 23, 17));
     // límites del rectángulo de la base
     base = rect;
-    //activo pero no visible 
+    // activo pero no visible
     bActive = true;
     bVisible = false;
 }
